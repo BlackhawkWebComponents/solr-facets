@@ -1,0 +1,27 @@
+{
+    "name": "solr-facets",
+    "homepage": "http://blackhawkwebcomponents.github.io/solr-facets",
+    "description": "",
+    "main": "solr-facets.html",
+    "authors": [
+        "Rob Beers"
+    ],
+    "license": "Apache2",
+    "version": "0.0.1",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "../"
+    ],
+    "keywords": [
+        "web-component",
+        "web-components",
+        "polymer"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#>=0.3.0 <1.0.0"
+    }
+}

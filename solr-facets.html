@@ -1,0 +1,56 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-ajax/core-ajax.html">
+<link rel="import" href="../solr-facet-item/solr-facet-field-item.html">
+
+<!--
+Element providing facet view for solr results
+
+##### Example
+
+    <solr-facets
+        facets=""
+        fieldMappings=""
+    </solr-facets>
+
+@element solr-facets
+@blurb Element providing facet view for solr results
+@status alpha
+@url http://blackhawkwebcomponents.github.io/solr-facets
+-->
+<polymer-element name="solr-facets" attributes="facets fieldMappings">
+
+    <template>
+        <template repeat="{{ fieldMap in fieldMappings }}">
+            <h3>{{fieldMap.display}}</h3>
+            <template repeat="{{ f, i in facets.facet_fields[fieldMap.field] }}">
+                <template if="{{ i%2 == 0 }}">
+                    <solr-facet-field-item name="{{f}}"
+                                           count="{{facets.facet_fields[fieldMap.field][i+1]}}">
+                    </solr-facet-field-item>
+                </template>
+            </template>
+        </template>
+
+    </template>
+    <script>
+        Polymer('solr-facets', {
+
+            /**
+             * A solr facet model
+             * @attribute facets
+             * @type object
+             */
+
+            ready: function () {
+                this.facets = {};
+                this.fieldMappings = [];
+            },
+            // filter to display json
+            json: function(value) {
+                return JSON.stringify(value, null, 2);
+            }
+
+        });
+    </script>
+</polymer-element>
+
