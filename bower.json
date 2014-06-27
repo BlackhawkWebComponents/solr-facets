@@ -1,0 +1,7 @@
+{
+  "name": "solr-facets#gh-pages",
+  "private": true,
+  "dependencies": {
+    "solr-facets": "BlackhawkWebComponents/solr-facets#master"
+  }
+}

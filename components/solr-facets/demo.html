@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>solr-facets Demo</title>
+
+    <script src="../platform/platform.js"></script>
+    <link rel="import" href="solr-facets.html">
+
+</head>
+<body unresolved>
+
+    <p>A <code>&lt;solr-facets&gt;</code> looks like this:</p>
+    <solr-facets></solr-facets>
+
+<script>
+
+    document.addEventListener('polymer-ready', function() {
+        var solrFacets = document.querySelector("solr-facets");
+        solrFacets.facets = {
+            "facet_queries":{},
+            "facet_fields":{
+                "cat":[
+                    "electronics",12,
+                    "currency",4,
+                    "memory",3,
+                    "connector",2,
+                    "graphics card",2,
+                    "hard drive",2,
+                    "search",2,
+                    "software",2,
+                    "camera",1,
+                    "copier",1,
+                    "electronics and computer1",1,
+                    "electronics and stuff2",1,
+                    "multifunction printer",1,
+                    "music",1,
+                    "printer",1,
+                    "scanner",1],
+                "inStock":[
+                    "true",17,
+                    "false",4]},
+            "facet_dates":{},
+            "facet_ranges":{}};
+        solrFacets.fieldMappings = [
+            {"field":"cat","display":"Category"},
+            {"field":"inStock","display":"In Stock"}];
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "solr-facets",
+  "homepage": "http://blackhawkwebcomponents.github.io/solr-facets",
+  "description": "",
+  "main": "solr-facets.html",
+  "authors": [
+    "Rob Beers"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "../"
+  ],
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#>=0.3.0 <1.0.0"
+  },
+  "_release": "717fa3fb29",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "717fa3fb292e83489700d566a1a0842c94f9d212"
+  },
+  "_source": "git://github.com/BlackhawkWebComponents/solr-facets.git",
+  "_target": "master",
+  "_originalSource": "BlackhawkWebComponents/solr-facets",
+  "_direct": true
+}
